@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-var url = process.env.URL || "https://test-cloud-run-5ns7nwldjq-uc.a.run.app";
+var url = process.env.URL;
 
 export default async function Home() {
   var res = await fetch(`${url}/api/photo?populate=*`);
