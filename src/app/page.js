@@ -1,5 +1,7 @@
 export default async function Home() {
-  var res = await fetch(`${process.env.URL}/api/tests/1?populate=*`);
+  var res = await fetch(`${process.env.URL}/api/tests/1?populate=*`, {
+    cache: "no-cache",
+  });
 
   var photo = await res.json();
 
